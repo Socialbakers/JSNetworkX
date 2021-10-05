@@ -1,7 +1,7 @@
 /*jshint latedef:false*/
 'use strict';
 
-import baseClone from 'lodash/internal/baseClone';
+import _ from 'lodash';
 import isGraph from './isGraph';
 import isMap from './isMap';
 import isSet from './isSet';
@@ -63,5 +63,5 @@ function deepcopyImplementation(value, stackA, stackB) {
  * @return {?}
  */
 export default function deepcopy(value) {
-  return deepcopyImplementation(value, [], []);
+  return _.cloneDeep(value);
 }
