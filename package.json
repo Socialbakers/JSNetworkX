@@ -54,6 +54,7 @@
   },
   "scripts": {
     "prepublish": "npm run build:node",
+    "prepare": "npm run build:node",
     "clean": "rm -rf node/ jsnetworkx.js jsnetworkx-dev.js",
     "build:node": "rm -rf node/ && node scripts/build-node.js src/ node/",
     "build:node:dev": "rm -rf node/ && node scripts/build-node.js --dev src/ node/",
